@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1769500800193,
+      "tag": "0000_misty_moon_knight",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1769500975761,
+      "tag": "0001_sweet_puff_adder",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1769501871340,
+      "tag": "0002_premium_sharon_carter",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1769505749792,
+      "tag": "0003_elite_doorman",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1769567638594,
+      "tag": "0004_petite_doctor_strange",
+      "breakpoints": true
+    }
+  ]
+}

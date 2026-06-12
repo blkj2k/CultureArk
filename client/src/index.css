@@ -1,0 +1,349 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-heading: "Cinzel", serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-chinese: "Noto Serif SC", serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Cultural Fusion Colors */
+  --color-jade: var(--jade);
+  --color-cinnabar: var(--cinnabar);
+  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+}
+
+:root {
+  /* Premium Cultural Fusion Light Mode */
+  --primary: oklch(0.25 0.08 250); /* Deep Imperial Blue */
+  --primary-foreground: oklch(0.98 0.005 90); /* Warm Ivory */
+  --sidebar-primary: oklch(0.25 0.08 250);
+  --sidebar-primary-foreground: oklch(0.98 0.005 90);
+  
+  /* Cultural Accent Colors */
+  --jade: oklch(0.55 0.12 160); /* Chinese Jade Green */
+  --cinnabar: oklch(0.55 0.18 25); /* Traditional Vermillion */
+  --gold: oklch(0.75 0.14 85); /* Imperial Gold */
+  --ink: oklch(0.18 0.02 260); /* Calligraphy Ink */
+  
+  --chart-1: oklch(0.55 0.12 160); /* Jade */
+  --chart-2: oklch(0.75 0.14 85);  /* Gold */
+  --chart-3: oklch(0.55 0.18 25);  /* Cinnabar */
+  --chart-4: oklch(0.5 0.1 280);   /* Indigo */
+  --chart-5: oklch(0.6 0.08 200);  /* Celadon */
+  
+  --radius: 0.375rem;
+  
+  --background: oklch(0.985 0.005 90); /* Warm Rice Paper */
+  --foreground: oklch(0.18 0.02 260); /* Ink Black */
+  
+  --card: oklch(0.98 0.008 85); /* Aged Parchment */
+  --card-foreground: oklch(0.18 0.02 260);
+  
+  --popover: oklch(0.99 0.005 90);
+  --popover-foreground: oklch(0.18 0.02 260);
+  
+  --secondary: oklch(0.94 0.015 85);
+  --secondary-foreground: oklch(0.25 0.03 260);
+  
+  --muted: oklch(0.94 0.015 85);
+  --muted-foreground: oklch(0.45 0.02 260);
+  
+  --accent: oklch(0.92 0.02 85);
+  --accent-foreground: oklch(0.25 0.03 260);
+  
+  --destructive: oklch(0.55 0.2 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  
+  --border: oklch(0.88 0.02 85);
+  --input: oklch(0.88 0.02 85);
+  --ring: oklch(0.55 0.12 160); /* Jade Ring */
+  
+  --sidebar: oklch(0.97 0.01 85);
+  --sidebar-foreground: oklch(0.18 0.02 260);
+  --sidebar-accent: oklch(0.94 0.015 85);
+  --sidebar-accent-foreground: oklch(0.25 0.03 260);
+  --sidebar-border: oklch(0.88 0.02 85);
+  --sidebar-ring: oklch(0.55 0.12 160);
+}
+
+.dark {
+  /* Premium Cultural Fusion Dark Mode */
+  --primary: oklch(0.75 0.14 85); /* Imperial Gold */
+  --primary-foreground: oklch(0.12 0.02 260);
+  
+  --sidebar-primary: oklch(0.55 0.12 160); /* Jade */
+  --sidebar-primary-foreground: oklch(0.12 0.02 260);
+  
+  /* Cultural Accent Colors */
+  --jade: oklch(0.6 0.14 160);
+  --cinnabar: oklch(0.6 0.2 25);
+  --gold: oklch(0.78 0.15 85);
+  --ink: oklch(0.08 0.01 260);
+  
+  --background: oklch(0.1 0.015 260); /* Deep Ink Black */
+  --foreground: oklch(0.92 0.015 85); /* Warm Ivory */
+  
+  --card: oklch(0.13 0.02 260);
+  --card-foreground: oklch(0.92 0.015 85);
+  
+  --popover: oklch(0.13 0.02 260);
+  --popover-foreground: oklch(0.92 0.015 85);
+  
+  --secondary: oklch(0.18 0.025 260);
+  --secondary-foreground: oklch(0.92 0.015 85);
+  
+  --muted: oklch(0.18 0.025 260);
+  --muted-foreground: oklch(0.6 0.02 260);
+  
+  --accent: oklch(0.18 0.025 260);
+  --accent-foreground: oklch(0.92 0.015 85);
+  
+  --destructive: oklch(0.45 0.2 25);
+  --destructive-foreground: oklch(0.92 0.015 85);
+  
+  --border: oklch(0.22 0.025 260);
+  --input: oklch(0.22 0.025 260);
+  --ring: oklch(0.75 0.14 85); /* Gold Ring */
+  
+  --chart-1: oklch(0.6 0.14 160);  /* Jade */
+  --chart-2: oklch(0.78 0.15 85); /* Gold */
+  --chart-3: oklch(0.6 0.2 25);   /* Cinnabar */
+  --chart-4: oklch(0.55 0.12 280); /* Indigo */
+  --chart-5: oklch(0.65 0.1 200); /* Celadon */
+  
+  --sidebar: oklch(0.1 0.015 260);
+  --sidebar-foreground: oklch(0.92 0.015 85);
+  --sidebar-accent: oklch(0.18 0.025 260);
+  --sidebar-accent-foreground: oklch(0.92 0.015 85);
+  --sidebar-border: oklch(0.22 0.025 260);
+  --sidebar-ring: oklch(0.75 0.14 85);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-wide;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+  
+  /* Chinese text styling */
+  .font-chinese {
+    font-family: "Noto Serif SC", serif;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+  
+  /* Premium Cultural Design Components */
+  .glass-panel {
+    @apply bg-background/70 backdrop-blur-xl border border-border/50 shadow-2xl;
+  }
+  
+  .glass-panel-dark {
+    @apply bg-card/80 backdrop-blur-xl border border-white/5 shadow-2xl;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px oklch(0.75 0.14 85 / 0.5);
+  }
+  
+  .text-glow-jade {
+    text-shadow: 0 0 20px oklch(0.55 0.12 160 / 0.5);
+  }
+  
+  .text-glow-gold {
+    text-shadow: 0 0 20px oklch(0.75 0.14 85 / 0.6);
+  }
+  
+  /* Cultural gradient backgrounds */
+  .gradient-cultural {
+    background: linear-gradient(
+      135deg,
+      oklch(0.55 0.12 160 / 0.1) 0%,
+      oklch(0.75 0.14 85 / 0.1) 50%,
+      oklch(0.55 0.18 25 / 0.1) 100%
+    );
+  }
+  
+  .gradient-premium {
+    background: linear-gradient(
+      180deg,
+      oklch(0.25 0.08 250 / 0.05) 0%,
+      transparent 50%,
+      oklch(0.75 0.14 85 / 0.05) 100%
+    );
+  }
+  
+  /* Decorative borders */
+  .border-cultural {
+    border-image: linear-gradient(
+      90deg,
+      oklch(0.55 0.12 160) 0%,
+      oklch(0.75 0.14 85) 50%,
+      oklch(0.55 0.18 25) 100%
+    ) 1;
+  }
+  
+  /* Premium card styling */
+  .card-premium {
+    @apply bg-card border border-border/50 shadow-lg hover:shadow-xl transition-all duration-300;
+    background: linear-gradient(
+      145deg,
+      oklch(0.98 0.008 85) 0%,
+      oklch(0.96 0.01 85) 100%
+    );
+  }
+  
+  .dark .card-premium {
+    background: linear-gradient(
+      145deg,
+      oklch(0.14 0.02 260) 0%,
+      oklch(0.12 0.015 260) 100%
+    );
+  }
+  
+  /* Ink brush stroke effect */
+  .ink-stroke {
+    position: relative;
+  }
+  
+  .ink-stroke::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(0.18 0.02 260) 20%,
+      oklch(0.18 0.02 260) 80%,
+      transparent 100%
+    );
+  }
+  
+  .dark .ink-stroke::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(0.75 0.14 85) 20%,
+      oklch(0.75 0.14 85) 80%,
+      transparent 100%
+    );
+  }
+  
+  /* Seal stamp effect */
+  .seal-stamp {
+    @apply inline-flex items-center justify-center px-3 py-1 text-sm font-medium;
+    border: 2px solid oklch(0.55 0.18 25);
+    color: oklch(0.55 0.18 25);
+    transform: rotate(-3deg);
+  }
+  
+  /* Section divider with cultural pattern */
+  .divider-cultural {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(0.88 0.02 85) 15%,
+      oklch(0.75 0.14 85) 50%,
+      oklch(0.88 0.02 85) 85%,
+      transparent 100%
+    );
+  }
+  
+  .dark .divider-cultural {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      oklch(0.22 0.025 260) 15%,
+      oklch(0.75 0.14 85) 50%,
+      oklch(0.22 0.025 260) 85%,
+      transparent 100%
+    );
+  }
+}
